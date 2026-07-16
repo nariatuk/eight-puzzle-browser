@@ -3,43 +3,44 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#6b3f24">
+    <meta name="theme-color" content="#10151b">
     <meta
       name="description"
-      content="木製玩具風の8パズル。手動操作と最短手数の自動整列をブラウザーで楽しめます。"
+      content="メタル調のひらがな8パズル。あ・か・さ・た・な・は・ま・やを順番に並べます。"
     >
-    <title>木の8パズル</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>メタルひらがな8パズル</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="metal.css">
   </head>
-  <body>
+  <body class="metal-theme" data-tile-labels="あ,か,さ,た,な,は,ま,や">
     <div class="page-shell">
       <nav class="game-switcher" aria-label="パズルの種類を切り替える">
         <span class="game-switcher-label">PUZZLE SELECT</span>
-        <span class="game-switcher-current" aria-current="page">数字8パズル</span>
-        <a href="hiragana/">ひらがな8パズル</a>
+        <a href="../">数字8パズル</a>
+        <span class="game-switcher-current" aria-current="page">ひらがな8パズル</span>
       </nav>
 
       <header class="hero">
-        <p class="eyebrow">SLIDING NUMBER PUZZLE</p>
-        <h1>木の8パズル</h1>
-        <p>数字のプレートを空きマスへ滑らせ、1から8まで順番に並べましょう。</p>
+        <p class="eyebrow">METALLIC SLIDING PUZZLE</p>
+        <h1>ひらがな8パズル</h1>
+        <p>金属プレートを空きマスへ滑らせ、「あ」から「や」まで順番に並べましょう。</p>
       </header>
 
       <main class="game-layout">
         <section class="board-section" aria-labelledby="board-title">
           <div class="section-heading">
             <div>
-              <p class="step-label">PLAY BOARD</p>
-              <h2 id="board-title">パズル盤</h2>
+              <p class="step-label">METAL PLAY BOARD</p>
+              <h2 id="board-title">ひらがな盤</h2>
             </div>
-            <span class="goal-chip">完成：1 → 8</span>
+            <span class="goal-chip">完成：あ → や</span>
           </div>
 
           <div
             id="puzzle-board"
             class="puzzle-board"
             role="group"
-            aria-label="3かける3の8パズル盤"
+            aria-label="3かける3のひらがな8パズル盤"
             aria-describedby="game-status"
           >
             <span class="empty-slot" aria-hidden="true"></span>
@@ -94,11 +95,11 @@
             <div class="control-number">2</div>
             <div class="control-content">
               <h2>手動で遊ぶ</h2>
-              <p>空きマスの上下左右にある、明るく表示されたプレートを押します。</p>
+              <p>空きマスの上下左右にある、角が明るく輝くプレートを押します。</p>
               <div class="mini-goal" aria-label="完成形">
-                <span>1</span><span>2</span><span>3</span>
-                <span>4</span><span>5</span><span>6</span>
-                <span>7</span><span>8</span><span class="mini-empty"></span>
+                <span>あ</span><span>か</span><span>さ</span>
+                <span>た</span><span>な</span><span>は</span>
+                <span>ま</span><span>や</span><span class="mini-empty"></span>
               </div>
             </div>
           </section>
@@ -146,6 +147,6 @@
       </div>
     </dialog>
 
-    <script type="module" src="src/app.js"></script>
+    <script type="module" src="../src/app.js"></script>
   </body>
 </html>

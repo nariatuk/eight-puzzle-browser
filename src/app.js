@@ -16,6 +16,15 @@ const SPEEDS = Object.freeze({
   fast: 150,
 });
 
+const configuredLabels = document.body.dataset.tileLabels?.split(",") ?? [];
+const TILE_LABELS = configuredLabels.length === 8
+  ? configuredLabels
+  : ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+function getTileLabel(tile) {
+  return TILE_LABELS[tile - 1] ?? String(tile);
+}
+
 const boardElement = document.querySelector("#puzzle-board");
 const emptySlotElement = document.querySelector(".empty-slot");
 const statusElement = document.querySelector("#game-status");
@@ -52,12 +61,13 @@ const tileElements = new Map();
 
 function createTiles() {
   for (let tile = 1; tile <= 8; tile += 1) {
+    const label = getTileLabel(tile);
     const button = document.createElement("button");
     button.className = "puzzle-tile";
     button.type = "button";
-    button.textContent = String(tile);
+    button.textContent = label;
     button.dataset.tile = String(tile);
-    button.setAttribute("aria-label", `数字${tile}のプレート`);
+    button.setAttribute("aria-label", `${label}のプレート`);
     button.addEventListener("click", () => handleTileSelection(tile));
     boardElement.append(button);
     tileElements.set(tile, button);
@@ -171,7 +181,7 @@ function handleTileSelection(tile) {
   }
   board = moveTile(board, tile);
   manualMoves += 1;
-  setStatus(`数字${tile}を動かしました。`);
+  setStatus(`「${getTileLabel(tile)}」を動かしました。`);
   renderBoard();
 
   if (isSolved(board)) {

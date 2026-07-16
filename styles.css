@@ -53,6 +53,57 @@ select:focus-visible {
   padding: 42px 0 64px;
 }
 
+.game-switcher {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: 5px;
+  margin: 0 0 25px auto;
+  padding: 5px;
+  border: 1px solid rgba(91, 50, 31, 0.17);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.74);
+  box-shadow: 0 8px 22px rgba(69, 38, 21, 0.1);
+}
+
+.game-switcher-label {
+  padding: 0 8px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.game-switcher a,
+.game-switcher-current {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.game-switcher-current {
+  color: #fffaf0;
+  background: var(--wood-dark);
+}
+
+.game-switcher a {
+  color: var(--green);
+  transition: color 140ms ease, background 140ms ease;
+}
+
+.game-switcher a:hover {
+  color: #fff;
+  background: var(--green);
+}
+
 .hero {
   max-width: 760px;
   margin-bottom: 30px;
@@ -536,6 +587,16 @@ button:disabled {
 
   .hero {
     margin-bottom: 20px;
+  }
+
+  .game-switcher {
+    width: 100%;
+    margin-bottom: 18px;
+    justify-content: center;
+  }
+
+  .game-switcher-label {
+    display: none;
   }
 
   .board-section,

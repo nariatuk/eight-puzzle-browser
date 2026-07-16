@@ -1,0 +1,273 @@
+:root {
+  --metal-black: #090c10;
+  --metal-deep: #111820;
+  --metal-mid: #303b46;
+  --metal-silver: #9eabb7;
+  --metal-bright: #edf7ff;
+  --metal-cyan: #7de4ff;
+  --metal-blue: #2388ab;
+}
+
+.metal-theme {
+  --ink: #eaf3f8;
+  --muted: #9caebb;
+  --paper: #0a0e13;
+  --paper-deep: #1d252d;
+  --wood-dark: #1c2730;
+  --wood: #3c4b57;
+  --wood-light: #9cabb5;
+  --honey: #71818c;
+  --cream: #151c23;
+  --green: #61cfea;
+  --red: #ff8178;
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.48);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 16% 0%, rgba(126, 181, 211, 0.12), transparent 30rem),
+    radial-gradient(circle at 90% 24%, rgba(91, 157, 185, 0.08), transparent 24rem),
+    repeating-linear-gradient(92deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 7px),
+    linear-gradient(135deg, #0b1016, #05070a 68%, #10171d);
+}
+
+.metal-theme .game-switcher {
+  border-color: rgba(190, 225, 242, 0.19);
+  background:
+    linear-gradient(145deg, rgba(57, 71, 82, 0.76), rgba(16, 23, 29, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 10px 30px rgba(0, 0, 0, 0.32);
+}
+
+.metal-theme .game-switcher-current {
+  color: #061016;
+  background: linear-gradient(135deg, #e8f5fc, #79cde2 52%, #a8e6f5);
+  box-shadow: 0 0 16px rgba(125, 228, 255, 0.28);
+}
+
+.metal-theme .game-switcher a {
+  color: #c6d4dc;
+}
+
+.metal-theme .game-switcher a:hover {
+  color: #061016;
+  background: #8edff2;
+}
+
+.metal-theme .eyebrow,
+.metal-theme .step-label {
+  color: var(--metal-cyan);
+  text-shadow: 0 0 14px rgba(125, 228, 255, 0.34);
+}
+
+.metal-theme .hero h1 {
+  color: #edf6fb;
+  text-shadow:
+    0 1px 0 #fff,
+    0 3px 0 #4f5c65,
+    0 8px 22px rgba(0, 0, 0, 0.55);
+}
+
+.metal-theme .board-section,
+.metal-theme .control-panel {
+  border-color: rgba(190, 222, 237, 0.18);
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 5px),
+    linear-gradient(145deg, rgba(37, 48, 58, 0.94), rgba(12, 17, 23, 0.96));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 30px rgba(255, 255, 255, 0.018),
+    var(--shadow);
+}
+
+.metal-theme .goal-chip {
+  border-color: rgba(125, 228, 255, 0.32);
+  color: var(--metal-cyan);
+  background: rgba(35, 136, 171, 0.12);
+  box-shadow: inset 0 0 12px rgba(125, 228, 255, 0.06);
+}
+
+.metal-theme .puzzle-board {
+  border-color: #171f26;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(108, 139, 155, 0.13), transparent 60%),
+    repeating-linear-gradient(90deg, rgba(226, 244, 252, 0.035) 0 1px, transparent 1px 6px),
+    linear-gradient(145deg, #202a33, #080c10 66%, #182129);
+  box-shadow:
+    inset 0 0 0 2px rgba(225, 246, 255, 0.16),
+    inset 0 16px 28px rgba(0, 0, 0, 0.6),
+    0 0 0 1px #020304,
+    0 22px 42px rgba(0, 0, 0, 0.52);
+}
+
+.metal-theme .empty-slot {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0 1px, transparent 1px 5px),
+    #080b0e;
+  box-shadow:
+    inset 0 3px 16px rgba(0, 0, 0, 0.95),
+    0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.metal-theme .puzzle-tile {
+  overflow: hidden;
+  border-color: rgba(225, 244, 252, 0.42);
+  color: #111820;
+  background:
+    radial-gradient(circle at 12% 9%, rgba(255, 255, 255, 0.92) 0 1px, rgba(255, 255, 255, 0.34) 2px, transparent 11px),
+    radial-gradient(circle at 88% 9%, rgba(255, 255, 255, 0.84) 0 1px, rgba(255, 255, 255, 0.3) 2px, transparent 11px),
+    radial-gradient(circle at 12% 91%, rgba(255, 255, 255, 0.75) 0 1px, rgba(255, 255, 255, 0.25) 2px, transparent 10px),
+    radial-gradient(circle at 88% 91%, rgba(255, 255, 255, 0.85) 0 1px, rgba(255, 255, 255, 0.28) 2px, transparent 10px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.09) 0 1px, rgba(0, 0, 0, 0.025) 1px 3px),
+    linear-gradient(145deg, #e1e8ed 0%, #86939d 34%, #c7d0d6 51%, #66737e 74%, #b8c4cc 100%);
+  box-shadow:
+    inset 2px 2px 2px rgba(255, 255, 255, 0.86),
+    inset -3px -3px 4px rgba(20, 30, 37, 0.58),
+    inset 0 0 0 4px rgba(44, 56, 65, 0.18),
+    0 5px 0 #28343d,
+    0 10px 19px rgba(0, 0, 0, 0.58);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(2rem, 8.5vw, 4.25rem);
+  font-weight: 800;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.78),
+    0 -1px 0 rgba(0, 0, 0, 0.68),
+    1px 0 0 rgba(255, 255, 255, 0.32);
+}
+
+.metal-theme .puzzle-tile::before {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: calc(clamp(13px, 3vw, 20px) - 4px);
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.48),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.28);
+  content: "";
+  pointer-events: none;
+}
+
+.metal-theme .puzzle-tile::after {
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  left: -80%;
+  width: 38%;
+  transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.68), transparent);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+}
+
+.metal-theme .puzzle-tile.is-movable {
+  filter: brightness(1.08) saturate(1.05);
+  box-shadow:
+    inset 2px 2px 2px rgba(255, 255, 255, 0.92),
+    inset -3px -3px 4px rgba(20, 30, 37, 0.5),
+    inset 0 0 0 4px rgba(91, 195, 222, 0.15),
+    0 5px 0 #26343e,
+    0 0 0 3px rgba(125, 228, 255, 0.26),
+    0 0 22px rgba(125, 228, 255, 0.24),
+    0 11px 20px rgba(0, 0, 0, 0.62);
+}
+
+.metal-theme .puzzle-tile.is-movable::after {
+  animation: metal-shine 2.4s ease-in-out infinite;
+}
+
+@keyframes metal-shine {
+  0%, 58% {
+    left: -80%;
+    opacity: 0;
+  }
+  66% {
+    opacity: 0.72;
+  }
+  84% {
+    left: 145%;
+    opacity: 0;
+  }
+  100% {
+    left: 145%;
+    opacity: 0;
+  }
+}
+
+.metal-theme .stat-card,
+.metal-theme .speed-field {
+  border-color: rgba(201, 231, 244, 0.13);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 4px),
+    rgba(5, 9, 12, 0.36);
+}
+
+.metal-theme .control-group {
+  border-bottom-color: rgba(197, 226, 240, 0.12);
+}
+
+.metal-theme .control-number {
+  color: #071016;
+  background: linear-gradient(145deg, #edf7fb, #71818d 58%, #cbd7dd);
+  box-shadow:
+    inset 1px 1px 0 #fff,
+    0 3px 0 #2b363e,
+    0 0 14px rgba(125, 228, 255, 0.12);
+}
+
+.metal-theme .difficulty-selector button,
+.metal-theme .quiet-button,
+.metal-theme .speed-field select {
+  border-color: rgba(196, 225, 238, 0.22);
+  color: #dbe8ee;
+  background: linear-gradient(145deg, #33404a, #12181e);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.metal-theme .difficulty-selector button.is-selected {
+  border-color: rgba(181, 238, 252, 0.74);
+  color: #071016;
+  background: linear-gradient(145deg, #e5f4fa, #6dc7dd 56%, #a9e1ed);
+  box-shadow: 0 0 18px rgba(125, 228, 255, 0.2);
+}
+
+.metal-theme .primary-button,
+.metal-theme .secondary-button {
+  border-color: #6ecbe2;
+  color: #061016;
+  background: linear-gradient(145deg, #effaff, #70c9df 48%, #348da8);
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.75),
+    0 4px 0 #1f6074,
+    0 0 18px rgba(125, 228, 255, 0.14);
+}
+
+.metal-theme .mini-goal {
+  border: 1px solid rgba(214, 239, 250, 0.22);
+  background: #090d11;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.72);
+}
+
+.metal-theme .mini-goal span:not(.mini-empty) {
+  color: #101820;
+  background: linear-gradient(145deg, #d9e3e9, #74828d 62%, #b4c0c8);
+  text-shadow: 0 1px 0 #fff;
+}
+
+.metal-theme .completion-dialog {
+  border-color: rgba(197, 230, 244, 0.28);
+  color: var(--ink);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 5px),
+    linear-gradient(145deg, #303c46, #10161c 70%);
+}
+
+.metal-theme .completion-mark {
+  color: #061016;
+  background: linear-gradient(145deg, #eefaff, #75d2e8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metal-theme .puzzle-tile.is-movable::after {
+    animation: none;
+  }
+}
