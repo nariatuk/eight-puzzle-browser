@@ -1,10 +1,27 @@
-# 木の8パズル（eight-puzzle-browser）
+# 8パズルコレクション（eight-puzzle-browser）
 
 C-GPT-5.6　Solによるパズルゲームの書き込み
 
-木製玩具をイメージした、ブラウザーで遊べる3×3の8パズルです。数字プレートを手動で動かすほか、現在の配置から最短手数を計算して自動でそろえられます。
+ブラウザーで遊べる3×3の8パズルです。木製玩具風の数字版と、角が輝くメタル調のひらがな版を用意しています。どちらも手動操作のほか、現在の配置から最短手数を計算して自動でそろえられます。
 
-## Windows 11かんたん版をダウンロード
+## インターネットで遊ぶ
+
+| ゲーム | デザイン | プレイ |
+|---|---|---|
+| 数字8パズル | 木製玩具風 | **[数字版を開く](https://nariatuk.github.io/eight-puzzle-browser/)** |
+| ひらがな8パズル | メタル調 | **[ひらがな版を開く](https://nariatuk.github.io/eight-puzzle-browser/hiragana/)** |
+
+両方のゲーム画面上部に切替リンクがあり、いつでも相互に移動できます。
+
+## 数字・ひらがな両方入りWindows版
+
+数字版とひらがな版をオフラインで相互に切り替えられるセットです。
+
+### [両ゲーム入りWindows版 ZIPをダウンロード](downloads/eight-puzzle-number-hiragana-v2.0.0.zip?raw=1)
+
+ZIPを右クリックして「すべて展開」し、`index.html`をダブルクリックしてください。PythonやNode.js、インターネット接続は不要です。
+
+## 数字版だけのWindows 11かんたん版
 
 **通常はこちらをお使いください。** ZIPを展開して、入っている`index.html`をダブルクリックするだけで起動します。PythonやNode.js、インターネット接続は不要です。
 
@@ -15,14 +32,16 @@ C-GPT-5.6　Solによるパズルゲームの書き込み
 3. 展開先の`index.html`をダブルクリックします。
 4. Microsoft EdgeやGoogle Chromeでゲームが始まります。
 
-## 2種類の違い
+## ファイル構成
 
 | 種類 | 保存場所 | 起動方法 | 用途 |
 |---|---|---|---|
-| **Windows 11かんたん版** | [`windows-simple/index.html`](windows-simple/index.html) | ダブルクリック | 遊ぶ・配布する場合におすすめ |
-| 開発・モジュール版 | リポジトリ直下の[`index.html`](index.html) | ローカルWebサーバー | プログラムの修正・テスト向け |
+| 数字版モジュール | [`index.html`](index.html) | Webサーバー／GitHub Pages | 木製の数字版 |
+| ひらがな版モジュール | [`hiragana/index.html`](hiragana/index.html) | Webサーバー／GitHub Pages | メタル調のひらがな版 |
+| 数字版単体Windows用 | [`windows-simple/index.html`](windows-simple/index.html) | ダブルクリック | 数字版だけを使う場合 |
+| 両ゲーム入りWindows用 | [`windows-combined/`](windows-combined/) | ダブルクリック | 数字・ひらがなを切替可能 |
 
-かんたん版の画面上部には「Windowsかんたん版」と表示されるため、起動後も見分けられます。ゲーム内容は両方とも同じです。
+数字版は木製玩具風、ひらがな版はメタル調なので、画面を見ただけでも区別できます。
 
 ## 主な機能
 
@@ -52,7 +71,7 @@ python -m http.server 8000
 1. 初級・中級・上級から難易度を選びます。
 2. 「シャッフルして始める」を押します。
 3. 明るく表示された、空きマスに隣接するプレートをクリックまたはタップします。
-4. 左上から `1, 2, 3 / 4, 5, 6 / 7, 8, 空き` の順に並べると完成です。
+4. 数字版は `1, 2, 3 / 4, 5, 6 / 7, 8, 空き`、ひらがな版は `あ, か, さ / た, な, は / ま, や, 空き` の順に並べると完成です。
 5. 解き方を見たい場合は「最短手数で自動整列」を押します。
 
 ## テスト
@@ -71,4 +90,10 @@ npm test
 
 ```bash
 npm run build:standalone
+```
+
+数字・ひらがな両方入りWindows版は次のコマンドで再生成できます。
+
+```bash
+npm run build:combined
 ```
